@@ -1,22 +1,27 @@
 package com.example.firebase_test;
 
-public class Post {
-    int id;
+import java.io.Serializable;
+
+public class Post implements Serializable {
+    String key;
     String title;
     String body;
 
-    public Post(int id, String title, String body) {
-        this.id = id;
+    public Post() {
+    }
+
+    public Post(String key, String title, String body) {
+        this.key = key;
         this.title = title;
         this.body = body;
     }
 
-    public int getId() {
-        return id;
+    public String getKey() {
+        return key;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getTitle() {
